@@ -1,0 +1,54 @@
+@import './mixin';
+
+.player {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+        display: flex;
+        gap: 10px;
+        div{
+            h5{
+                font-size: 18px;
+                font-weight: 500;
+            }
+            p{
+                color: rgb(150, 150, 150);
+            }
+        }
+        img{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+    }
+
+    audio{
+        width: 40%;
+    }
+    .icons{
+        display: flex;
+        gap: 20px;
+        font-size: 20px;
+        margin-right: 20px;
+        @include md{
+            display: none;
+        }
+    }
+}
+
+@keyframes turn {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate {
+    animation: turn 4s infinite linear;
+}
+

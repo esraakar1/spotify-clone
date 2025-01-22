@@ -1,0 +1,149 @@
+@import './variables';
+@import './mixin';
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: $grayColor;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    // header
+
+    header{
+        display: flex;
+        background-color: $blackColor;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        gap: 20px;
+        form {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.221);
+            width: 100%;
+            max-width: 350px;
+            border-radius: 5px;
+            display: flex;
+            @media (max-width: 650px) {
+                max-width: none;
+            }
+
+            input {
+                background: transparent;
+                border: none;
+                outline: none;
+                padding: 15px;
+                color: $textColor;
+                width: 100%;
+               
+  
+                }
+                button {
+                    border: none;
+                    background: none;
+                    color: $textColor;
+                    cursor: pointer;
+                    margin-right: 10px;
+            }
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+            @media (max-width: 650px) {
+                display: none;
+
+            }
+            span {
+                font-size: 14px;
+                cursor: pointer;
+                white-space: nowrap;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+
+    // songs
+    section {
+         flex: 1;  //mevcut alanı tamamen kaplasın
+         margin-top: 20px;
+
+         h2 {
+            @include sm {
+                font: 17px; 
+            }
+         }
+        
+        //  list
+        .list{
+            margin-top: 20px;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            @include md {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            gap: 20px;
+        }
+    }
+}
+
+// card 
+.card {
+    background: #121212;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 10px;
+    &:hover .play {
+        bottom: 20px;
+        opacity: 1;
+    }
+
+    // figure 
+    figure {
+        position: relative;
+        img {  
+     width: 100%;
+     border-radius: 10px;
+      }
+      .play {
+    background-color: $greenColor;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+    transition: all 0.3s;
+    font-size: 23px;
+    opacity: 0;
+    &:hover {
+        background: #0f6d32;
+        scale: 1.1;
+        rotate: 360deg;
+    }
+    i {
+        pointer-events: none;
+    }
+
+      }
+   }
+
+   .card-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Clone</title>
+    <!-- css link  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- bs link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!--  -->
+    <div class="layout">
+        <!-- aside -->
+         <aside>
+            <figure>
+                <img src="images/no-text-logo.png" alt="">
+                <span>Spotify</span>
+            </figure>
+            <!-- nav -->
+             <nav>
+                <a href="#">
+                    <i class="bi bi-house"></i>
+                    <span>Anasayfa</span>
+                </a>
+                <a href="#">
+                    <i class="bi bi-search"></i>
+                    <span>Arama</span>
+                </a>
+                <a href="#">
+                    <i class="bi bi-collection"></i>
+                    <span>Kütüphane</span>
+                </a>
+                <a href="#">
+                    <i class="bi bi-music-note-list"></i>
+                    <span>Çalma Listeleri</span>
+                </a>
+                <a href="#">
+                    <i class="bi bi-heart"></i>
+                    <span>Beğenilen Şarkılar</span>
+                </a>
+             </nav>
+         </aside>
+         <!-- main -->
+          <main>
+            <!-- header -->
+             <header>
+                <!-- form -->
+                <form>
+                    <input type="text" placeholder="müzik arayınız...">
+                    <button type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <nav>
+                    <span>premium</span>
+                    <span>destek</span>
+                    <span>oturum aç</span>
+                </nav>
+             </header>
+             <!-- songs area  -->
+              <section>
+                <!-- title -->
+                <h2 id="title">popüler müzikler</h2>
+                <!-- list -->
+                <div class="list">
+                 <!-- card -->
+                    <!-- <div class="card">
+                        <figure>
+                            <img src="" alt="resim">
+                            <div class="play">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                        </figure>
+                        
+                         <div class="card-info">
+                            <h4>rumors</h4>
+                            <h4>neffex</h4>
+                         </div>
+                    </div> -->
+                </div>
+              </section>
+          </main>
+    </div>
+
+    <!-- play music  -->
+     <div class="player">
+        <!-- şarkı bilgi  -->
+         <!-- <div class="info">
+            <img src="" alt="resim">
+            <div>
+                <h5>best of me</h5>
+                <p>neffex</p>
+            </div> -->
+        </div>
+            <!-- play kısmı  -->
+             <audio src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/93/90/8d/93908d5c-9a9f-555a-0bf0-c72a019abd16/mzaf_17896668841705900093.plus.aac.ep.m4a" controls></audio>
+             <!-- icons  -->
+              <div class="icons">
+                <i class="bi bi-music-note-list"></i>
+                <i class="bi bi-boombox-fill"></i>
+                <i class="bi bi-pc-display"></i>
+         </div>
+     </div>
+    <!-- js bağlantı -->
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@import './variables';
+@import './mixin';
+
+aside {
+    background-color: $grayColor;
+    padding: 20px;
+    border-radius: 10px;
+    @include xl {
+        padding: 20px 10px;
+    }
+
+    figure{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+            width: 40px;
+        }
+        span{
+            font-size: 25px;
+            font-weight: bold;
+            color: $greenColor;
+            @include lg {
+                display: none;
+            }
+        }
+    }
+
+    // nav
+    nav{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+        a{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 10px;
+
+            i {
+                @include lg {
+                    font-size: 18px;
+                }
+
+            }
+            span{
+                @include lg {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                background-color: $greenColor;
+                color: $blackColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+aside {
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 1200px) {
+  aside {
+    padding: 20px 10px;
+  }
+}
+aside figure {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+aside figure img {
+  width: 40px;
+}
+aside figure span {
+  font-size: 25px;
+  font-weight: bold;
+  color: #1db954;
+}
+@media (max-width: 992px) {
+  aside figure span {
+    display: none;
+  }
+}
+aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+aside nav a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+@media (max-width: 992px) {
+  aside nav a i {
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  aside nav a span {
+    display: none;
+  }
+}
+aside nav a:hover {
+  background-color: #1db954;
+  color: #121212;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #282828;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+main header {
+  display: flex;
+  background-color: #121212;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+}
+main header form {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.221);
+  width: 100%;
+  max-width: 350px;
+  border-radius: 5px;
+  display: flex;
+}
+@media (max-width: 650px) {
+  main header form {
+    max-width: none;
+  }
+}
+main header form input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 15px;
+  color: rgba(255, 255, 255, 0.78);
+  width: 100%;
+}
+main header form button {
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.78);
+  cursor: pointer;
+  margin-right: 10px;
+}
+main header nav {
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 650px) {
+  main header nav {
+    display: none;
+  }
+}
+main header nav span {
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+main header nav span:hover {
+  color: white;
+}
+main section {
+  flex: 1;
+  margin-top: 20px;
+}
+@media (max-width: 576px) {
+  main section h2 {
+    font: 17px;
+  }
+}
+main section .list {
+  margin-top: 20px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  main section .list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.card {
+  background: #121212;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 10px;
+}
+.card:hover .play {
+  bottom: 20px;
+  opacity: 1;
+}
+.card figure {
+  position: relative;
+}
+.card figure img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card figure .play {
+  background-color: #1db954;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  transition: all 0.3s;
+  font-size: 23px;
+  opacity: 0;
+}
+.card figure .play:hover {
+  background: #0f6d32;
+  scale: 1.1;
+  rotate: 360deg;
+}
+.card figure .play i {
+  pointer-events: none;
+}
+.card .card-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.player {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.player .info {
+  display: flex;
+  gap: 10px;
+}
+.player .info div h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.player .info div p {
+  color: rgb(150, 150, 150);
+}
+.player .info img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.player audio {
+  width: 40%;
+}
+.player .icons {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .player .icons {
+    display: none;
+  }
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate {
+  animation: turn 4s infinite linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.78);
+  white-space: nowrap;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+body {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.layout {
+  height: calc(100vh - 120px);
+  display: flex;
+  gap: 20px;
+}
+
+/* From Uiverse.io loader */
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+  width: 100px;
+  height: 100px;
+  animation: spinning82341 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50px;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+  background-color: rgb(36, 36, 36);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
